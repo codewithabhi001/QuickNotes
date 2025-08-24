@@ -76,20 +76,32 @@ To build a functional and beautiful mobile note-taking app using Flutter, implem
 
 ### Building the APK
 
-To build a release APK, run the following command:
+To create smaller, optimized APKs for different device architectures, this project uses the `--split-per-abi` flag.
 
 ```sh
-flutter build apk --release
+flutter build apk --release --split-per-abi
 ```
 
-The generated APK will be located at `build/app/outputs/flutter-apk/app-release.apk`.
+This generates the following files in `build/app/outputs/flutter-apk/`:
+- `app-armeabi-v7a-release.apk` (14.2MB)
+- `app-arm64-v8a-release.apk` (16.7MB)
+- `app-x86_64-release.apk` (17.8MB)
+
+### ProGuard Configuration
+
+To further reduce app size and obfuscate the code, ProGuard is enabled for release builds. The configuration is stored in `android/app/proguard-rules.pro`:
+
+```
+-keep class io.flutter.app.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-keep class io.flutter.embedding.** { *; }
+-dontwarn io.flutter.embedding.**
+```
 
 ---
 
-## 📸 Screenshots
+## 🎥 App Demo
 
-*(Add your screenshots here. You can capture them from your emulator or device and place them in a `screenshots` directory.)*
+A video demonstrating the app's features is available in the repository.
 
-**Example:**
-`![Home Screen - Light](screenshots/home_light.png)`
-`![Home Screen - Dark](screenshots/home_dark.png)`
+[Link to Video](assets/videos/QuickNotes_video.mp4)
