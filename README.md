@@ -11,6 +11,7 @@ To build a functional and beautiful mobile note-taking app using Flutter, implem
 ## ✅ Features Implemented
 
 ### Core Features
+
 - [x] **Create a note** (with title and description)
 - [x] **View a list of saved notes** in a clean, card-based layout.
 - [x] **Edit and delete a note**.
@@ -21,6 +22,7 @@ To build a functional and beautiful mobile note-taking app using Flutter, implem
 - [x] **State management** using `Provider`.
 
 ### Bonus Features
+
 - [x] **Add tags and categories** to notes for better organization.
 - [x] **Dark mode toggle** with dynamic theming using `FlexColorScheme`.
 - [x] **Swipe-to-delete** with an "UNDO" action.
@@ -53,18 +55,22 @@ To build a functional and beautiful mobile note-taking app using Flutter, implem
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Flutter SDK (version 3.9.0 or higher)
 - An IDE like Android Studio or VS Code with the Flutter plugin.
 - An Android/iOS emulator or a physical device.
 
 ### Installation
+
 1.  **Clone the repository:**
+
     ```sh
-    git clone https://github.com/your-username/quicknotes.git
-    cd quicknotes
+    https://github.com/codewithabhi001/QuickNotes
+    cd QuickNotes
     ```
 
 2.  **Install dependencies:**
+
     ```sh
     flutter pub get
     ```
@@ -83,6 +89,7 @@ flutter build apk --release --split-per-abi
 ```
 
 This generates the following files in `build/app/outputs/flutter-apk/`:
+
 - `app-armeabi-v7a-release.apk` (14.2MB)
 - `app-arm64-v8a-release.apk` (16.7MB)
 - `app-x86_64-release.apk` (17.8MB)
